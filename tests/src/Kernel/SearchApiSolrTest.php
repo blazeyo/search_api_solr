@@ -11,6 +11,7 @@ use Drupal\search_api\Utility\Utility;
 use Drupal\search_api_solr\Plugin\search_api\backend\SearchApiSolrBackend;
 use Drupal\search_api_solr\SolrBackendInterface;
 use Drupal\Tests\search_api\Kernel\BackendTestBase;
+use Drupal\Tests\search_api_solr\InvokeMethodTrait;
 use Drupal\user\Entity\User;
 
 /**

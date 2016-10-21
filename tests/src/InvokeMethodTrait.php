@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\Tests\search_api_solr\Kernel;
+namespace Drupal\Tests\search_api_solr;
 
 
 /**

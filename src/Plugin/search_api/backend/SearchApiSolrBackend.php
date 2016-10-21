@@ -34,6 +34,7 @@ use Drupal\search_api_solr\SolrBackendInterface;
 use Drupal\search_api_solr\SolrConnector\SolrConnectorPluginManager;
 use Drupal\search_api_solr\Utility\Utility as SearchApiSolrUtility;
 use Solarium\Core\Client\Response;
+use Solarium\Core\Query\Helper;
 use Solarium\Core\Query\Result\ResultInterface;
 use Solarium\QueryType\Select\Query\Query;
 use Solarium\Exception\ExceptionInterface;
@@ -1617,7 +1618,7 @@ class SearchApiSolrBackend extends BackendPluginBase implements SolrBackendInter
    */
   protected function formatDate($input) {
     $input = is_numeric($input) ? (int) $input : strtotime($input);
-    return $this->getSolrConnector()->getQueryHelper()->formatDate($input);
+    return (new Helper())->formatDate($input);
   }
 
   /**
